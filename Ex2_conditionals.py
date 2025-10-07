@@ -23,6 +23,8 @@
 # - Create a variable called `number` and assign it a value.
 #   Try several examples: a positive number, a negative number, and zero.
 
+
+
 # Task 2:
 # - Write an if statement that checks if the number is greater than 0.
 #   If it is, print: "The number is positive."
@@ -35,6 +37,19 @@
 # - Test with different values. What messages appear for each?
 
 # Write your Step 1 code below:
+#1
+
+number = 35.2
+
+#2
+
+if number > 0: 
+    print("The number is positive.")
+
+if number %2 == 0:
+    print("The number is even.")
+elif number %2 != 0:
+    print("The number is odd.")
 
 
 # ---- GIT STEP ----
