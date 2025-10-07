@@ -39,17 +39,24 @@
 # Write your Step 1 code below:
 #1
 
-number = 35.2
+number = 300
+
 
 #2
 
 if number > 0: 
     print("The number is positive.")
+else:
+    print("The number is zero or negative.")
 
 if number %2 == 0:
     print("The number is even.")
-elif number %2 != 0:
+else:
     print("The number is odd.")
+if number %2 ==0 and  number %3 ==0:
+    print("Divisible by 2 and 3.")
+else:
+    print("Not divisible by both")
 
 
 # ---- GIT STEP ----
