@@ -41,8 +41,9 @@
 # in as well. I hope this is ok? Cheers Darren
 
 #1
-number = 75
+number = 6888546
 #2
+print()
 print("Step 1")
 if number > 0: 
     print("The number is positive.")
@@ -177,7 +178,20 @@ print()
 # - Print a message such as: "The number is positive and even."
 
 # Write Extension 1 code below:
-
+# Darrens code
+print()
+print("Extension 1")
+print()
+number = int(input ("Choose a whole number "))
+if number == 0:
+    print("The number is 0!")
+elif number < 0:
+    print("The number is negative!")
+elif number %2 == 0:
+    print("The number is even!")
+else:
+    print("The number is odd!")
+print()
 
 # ---- GIT STEP (after completing this extension) ----
 # git add Ex2_conditionals.py
