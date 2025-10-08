@@ -245,7 +245,28 @@ print()
 # - Use nested if statements if you like.
 
 # Write Extension 3 code below:
+# Darrens code
+print()
+print("Extension 3")
+print()
+user = 1234
+password = "Fido123"
 
+username =int(input("Enter your username "))
+Pass = input("Enter your password ")
+if username == user and Pass == password:
+    print("Login successful!")
+elif Pass == password:
+    print("Username not found.")
+elif username == user:
+    print("Password incorrect")   
+print()
+# Dom I can't figure out how to structure the number of tries! I understand I need to set
+# a variable for total tries such as total_tries = 3 and a way to increase the attempt
+# count by +1 each time. Its the loop back I'm struggling with for example if you enter
+# an incorrect username how do I loop back to the input commands while increasing the tries by 1? 
+# I can't figure it out. Maybe you'll have more success.
+# 
 # ---- GIT STEP ----
 # git add Ex2_conditionals.py
 # git commit -m "Completed Extension 3"
