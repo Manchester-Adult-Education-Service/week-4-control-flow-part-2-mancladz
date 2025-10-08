@@ -23,8 +23,6 @@
 # - Create a variable called `number` and assign it a value.
 #   Try several examples: a positive number, a negative number, and zero.
 
-
-
 # Task 2:
 # - Write an if statement that checks if the number is greater than 0.
 #   If it is, print: "The number is positive."
@@ -37,26 +35,27 @@
 # - Test with different values. What messages appear for each?
 
 # Write your Step 1 code below:
+
+# Dominic I hope you don't mind but I've just tidied up the code a bit
+# I added the Steps each part of the code refers to and put some spacing
+# in as well. I hope this is ok? Cheers Darren
+
 #1
-
-number = 300
-
-
+number = 75
 #2
-
+print("Step 1")
 if number > 0: 
     print("The number is positive.")
 else:
     print("The number is zero or negative.")
-
+print()
+#3
 if number %2 == 0:
     print("The number is even.")
 else:
     print("The number is odd.")
-if number %2 ==0 and  number %3 ==0:
-    print("Divisible by 2 and 3.")
-else:
-    print("Not divisible by both")
+print()
+
 
 
 # ---- GIT STEP ----
@@ -90,6 +89,21 @@ else:
 
 # Write your Step 2 code below:
 
+#3
+print("Step 2")
+if number %2 ==0 and number %3 ==0:
+    print("Divisible by 2 and 3.")
+else:
+    print("Not divisible by both")
+
+print()
+#Code added by Darren
+#4
+if number %2 ==0 or number %3 ==0:
+    print("Divisible by 2 and 3.")
+else:
+    print("Not divisible by both")
+print()
 
 # ---- GIT STEP ----
 # 1. Save your work.
@@ -117,12 +131,28 @@ else:
 
 # Task 3:
 # - If the number is between 1 and 10 (inclusive), print: "A small positive number."
+# This condition cannot be met without changing the first if statement!
+# As soon as you put 1 or above it satisfies the condition and ignores
+# the rest of the elif conditions.
 
 # Task 4:
 # - Test with different values. Try to hit every condition.
 
+# Darrens Code
 # Write your Step 3 code below:
-
+print("Step 3")
+print()
+if number > 0 and number > 10 and number < 100:
+    print("The number is positive.")
+elif number ==0:
+    print("The number is 0")
+elif number > 100:
+    print("That's a large number!")
+elif number >= 1 and number <= 10:
+    print("A small positive number.")
+else:
+    print("The number is negative.")
+print()
 
 # ---- GIT STEP ----
 # 1. Save your work.
