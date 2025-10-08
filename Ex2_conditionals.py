@@ -209,6 +209,20 @@ print()
 #     - 65 or older → "You are a senior."
 
 # Write Extension 2 code below:
+# Darrens code
+print()
+print("Extension 2")
+print()
+age = int(input("What is your age? "))
+if age <=12:
+    print("You are a child and probably wish you were a teenager!")
+elif age >=13 and age <= 17:
+    print("You're a teenager and probably wish you were an adult!")
+elif age >=18 and age <= 64:
+    print("You are an adult and probably wish you were a teenager again!")
+else:
+    print("You're a senior and probably wish you were a child again!")
+print()
 
 
 # ---- GIT STEP ----
@@ -231,7 +245,6 @@ print()
 # - Use nested if statements if you like.
 
 # Write Extension 3 code below:
-
 
 # ---- GIT STEP ----
 # git add Ex2_conditionals.py
