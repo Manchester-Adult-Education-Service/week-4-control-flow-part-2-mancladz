@@ -249,17 +249,24 @@ print()
 print()
 print("Extension 3")
 print()
+attempts = 0
+max_attempts = 3
 user = 1234
 password = "Fido123"
-
-username =int(input("Enter your username "))
-Pass = input("Enter your password ")
+while attempts < max_attempts:
+    username =int(input("Enter your username "))
+    Pass = input("Enter your password ")
 if username == user and Pass == password:
     print("Login successful!")
-elif Pass == password:
+    break
+if username != user:
     print("Username not found.")
-elif username == user:
-    print("Password incorrect")   
+elif Pass != password:
+    print("Password incorrect")
+attempts += 1
+print(f"Attempts left: {max_attempts-attempts}")
+if attempts==max_attempts:
+    print("Too many attempts account locked.")
 print()
 # Dom I can't figure out how to structure the number of tries! I understand I need to set
 # a variable for total tries such as total_tries = 3 and a way to increase the attempt
