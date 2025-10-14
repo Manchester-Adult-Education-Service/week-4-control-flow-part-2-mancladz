@@ -36,6 +36,28 @@
 
 # Write your Step 1 code below:
 
+# Dominic I hope you don't mind but I've just tidied up the code a bit
+# I added the Steps each part of the code refers to and put some spacing
+# in as well. I hope this is ok? Cheers Darren
+
+#1
+number = 6888546
+#2
+print()
+print("Step 1")
+if number > 0: 
+    print("The number is positive.")
+else:
+    print("The number is zero or negative.")
+print()
+#3
+if number %2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+print()
+
+
 
 # ---- GIT STEP ----
 # 1. Save your work.
@@ -68,6 +90,21 @@
 
 # Write your Step 2 code below:
 
+#3
+print("Step 2")
+if number %2 ==0 and number %3 ==0:
+    print("Divisible by 2 and 3.")
+else:
+    print("Not divisible by both")
+
+print()
+#Code added by Darren
+#4
+if number %2 ==0 or number %3 ==0:
+    print("Divisible by 2 and 3.")
+else:
+    print("Not divisible by both")
+print()
 
 # ---- GIT STEP ----
 # 1. Save your work.
@@ -95,12 +132,28 @@
 
 # Task 3:
 # - If the number is between 1 and 10 (inclusive), print: "A small positive number."
+# This condition cannot be met without changing the first if statement!
+# As soon as you put 1 or above it satisfies the condition and ignores
+# the rest of the elif conditions.
 
 # Task 4:
 # - Test with different values. Try to hit every condition.
 
+# Darrens Code
 # Write your Step 3 code below:
-
+print("Step 3")
+print()
+if number > 0 and number > 10 and number < 100:
+    print("The number is positive.")
+elif number ==0:
+    print("The number is 0")
+elif number > 100:
+    print("That's a large number!")
+elif number >= 1 and number <= 10:
+    print("A small positive number.")
+else:
+    print("The number is negative.")
+print()
 
 # ---- GIT STEP ----
 # 1. Save your work.
@@ -125,7 +178,20 @@
 # - Print a message such as: "The number is positive and even."
 
 # Write Extension 1 code below:
-
+# Darrens code
+print()
+print("Extension 1")
+print()
+number = int(input ("Choose a whole number "))
+if number == 0:
+    print("The number is 0!")
+elif number < 0:
+    print("The number is negative!")
+elif number %2 == 0:
+    print("The number is even!")
+else:
+    print("The number is odd!")
+print()
 
 # ---- GIT STEP (after completing this extension) ----
 # git add Ex2_conditionals.py
@@ -143,6 +209,20 @@
 #     - 65 or older → "You are a senior."
 
 # Write Extension 2 code below:
+# Darrens code
+print()
+print("Extension 2")
+print()
+age = int(input("What is your age? "))
+if age <=12:
+    print("You are a child and probably wish you were a teenager!")
+elif age >=13 and age <= 17:
+    print("You're a teenager and probably wish you were an adult!")
+elif age >=18 and age <= 64:
+    print("You are an adult and probably wish you were a teenager again!")
+else:
+    print("You're a senior and probably wish you were a child again!")
+print()
 
 
 # ---- GIT STEP ----
@@ -165,8 +245,44 @@
 # - Use nested if statements if you like.
 
 # Write Extension 3 code below:
+# Darrens code
+print()
+print("Extension 3 - Username & Password")
+print()
+attempts = 0
+max_attempts = 3
+user = 1234
+password = "Fido123"
 
-
+username =int(input("Enter your username "))
+Pass = input("Enter your password ")
+while attempts < max_attempts:
+    while username != user:
+            print("Username not found")
+            attempts += 1
+            print(f"Attempts left: {max_attempts - attempts}")
+            username =int(input("Enter your username "))
+            Pass = input("Enter your password ")
+    if Pass != password:
+        print("Password incorrect")
+        attempts += 1
+        print(f"Attempts left: {max_attempts - attempts}")
+        username =int(input("Enter your username "))
+        Pass = input("Enter your password ")
+    elif attempts >= 3:
+        print("Too many attempts account locked.")
+        break
+    else:
+        print("Login successful")
+        break
+print()
+# So I have 90% of it working! If you enter the correct username & password it displays the "login
+# successful" message. If you incorrectly enter either the username or password it will tell you
+# "username not found" or "password incorrect" and reduce your attempts left by 1. However, I just
+# cannot get it to break the loop and display the "Too many attempts account locked" message. It just
+# keeps on going into negative values!
+# 
+# 
 # ---- GIT STEP ----
 # git add Ex2_conditionals.py
 # git commit -m "Completed Extension 3"
