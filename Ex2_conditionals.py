@@ -247,32 +247,41 @@ print()
 # Write Extension 3 code below:
 # Darrens code
 print()
-print("Extension 3")
+print("Extension 3 - Username & Password")
 print()
 attempts = 0
 max_attempts = 3
 user = 1234
 password = "Fido123"
+
+username =int(input("Enter your username "))
+Pass = input("Enter your password ")
 while attempts < max_attempts:
-    username =int(input("Enter your username "))
-    Pass = input("Enter your password ")
-if username == user and Pass == password:
-    print("Login successful!")
-    break
-if username != user:
-    print("Username not found.")
-elif Pass != password:
-    print("Password incorrect")
-attempts += 1
-print(f"Attempts left: {max_attempts-attempts}")
-if attempts==max_attempts:
-    print("Too many attempts account locked.")
+    while username != user:
+            print("Username not found")
+            attempts += 1
+            print(f"Attempts left: {max_attempts - attempts}")
+            username =int(input("Enter your username "))
+            Pass = input("Enter your password ")
+    if Pass != password:
+        print("Password incorrect")
+        attempts += 1
+        print(f"Attempts left: {max_attempts - attempts}")
+        username =int(input("Enter your username "))
+        Pass = input("Enter your password ")
+    elif attempts >= 3:
+        print("Too many attempts account locked.")
+        break
+    else:
+        print("Login successful")
+        break
 print()
-# Dom I can't figure out how to structure the number of tries! I understand I need to set
-# a variable for total tries such as total_tries = 3 and a way to increase the attempt
-# count by +1 each time. Its the loop back I'm struggling with for example if you enter
-# an incorrect username how do I loop back to the input commands while increasing the tries by 1? 
-# I can't figure it out. Maybe you'll have more success.
+# So I have 90% of it working! If you enter the correct username & password it displays the "login
+# successful" message. If you incorrectly enter either the username or password it will tell you
+# "username not found" or "password incorrect" and reduce your attempts left by 1. However, I just
+# cannot get it to break the loop and display the "Too many attempts account locked" message. It just
+# keeps on going into negative values!
+# 
 # 
 # ---- GIT STEP ----
 # git add Ex2_conditionals.py
